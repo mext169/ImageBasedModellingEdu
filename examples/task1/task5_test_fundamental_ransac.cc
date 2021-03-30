@@ -18,6 +18,7 @@
 #include "sfm/fundamental.h"
 #include "sfm/correspondence.h"
 #include "math/matrix_svd.h"
+#include <cassert>
 
 typedef math::Matrix<double, 3, 3> FundamentalMatrix;
 
@@ -38,9 +39,10 @@ int  calc_ransac_iterations (double p,
                            int K,
                            double z = 0.99){
 
-    /** TODO HERE
-     * Coding here**/
-    return 0;
+    // TODO HERE
+    double prob_all_good = math::fastpow(p, K);
+    double num_iterations = std::log(1.0 - z) / std::log(1.0 - prob_all_good);
+    return static_cast<int>(math::round(num_iterations));
 
 
     /** Reference
@@ -133,6 +135,7 @@ void calc_fundamental_least_squares(sfm::Correspondences2D2D const & matches, Fu
     for (std::size_t i = 0; i < matches.size(); ++i)
     {
         sfm::Correspondence2D2D const& p = matches[i];
+        // 每一行
         A[i * 9 + 0] = p.p2[0] * p.p1[0];
         A[i * 9 + 1] = p.p2[0] * p.p1[1];
         A[i * 9 + 2] = p.p2[0] * 1.0;
@@ -166,14 +169,17 @@ void calc_fundamental_least_squares(sfm::Correspondences2D2D const & matches, Fu
  */
 std::vector<int> find_inliers(sfm::Correspondences2D2D const & matches
     ,FundamentalMatrix const & F, const double & thresh){
+
     const double squared_thresh = thresh* thresh;
 
     std::vector<int> inliers;
 
-    /**
-     * TODO HERE
-     *
-     * Coding here **/
+    // TODO HERE
+    for (int i = 0; i < matches.size(); ++i) {
+        double error = calc_sampson_distance(F, matches[i]);
+        if (error < squared_thresh)
+            inliers.push_back(i);
+    }
 
     /** Reference
     for(int i=0; i< matches.size(); i++){

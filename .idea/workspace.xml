@@ -27,7 +27,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08155804-328d-42e4-b20e-96f75a0af12d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/task1/task2_test_camera.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/task2_test_camera.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/task1/task4_test_fundamental_8_point.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/task4_test_fundamental_8_point.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/task1/task5_test_fundamental_ransac.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/task5_test_fundamental_ransac.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/task1/task6_test_pose_from_fundamental.cc" beforeDir="false" afterPath="$PROJECT_DIR$/examples/task1/task6_test_pose_from_fundamental.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/matching.cc" beforeDir="false" afterPath="$PROJECT_DIR$/features/matching.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texturing/global_seam_leveling.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/texturing/global_seam_leveling.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/matching_featureset.png" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/matching_featureset.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +64,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
-  <component name="RunManager" selected="CMake Application.task3_test_feature_matching">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="CMake Application.task5_test_fundamental_ransac">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="coldet" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ImageBasedModellingEdu" TARGET_NAME="coldet" CONFIG_NAME="Debug">
@@ -180,6 +189,7 @@
       <workItem from="1610362189581" duration="367000" />
       <workItem from="1610371125559" duration="614000" />
       <workItem from="1610634494350" duration="3956000" />
+      <workItem from="1617095305170" duration="11292000" />
     </task>
     <task id="LOCAL-00001" summary="Add all the basic library and the sample code for class1">
       <created>1610359674091</created>

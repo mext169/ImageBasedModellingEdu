@@ -23,6 +23,7 @@ Matching::remove_inconsistent_matches (Matching::Result* matches)
     {
         if (matches->matches_1_2[i] < 0)
             continue;
+        // 我的匹配是你，你的匹配也要是我才可以
         if (matches->matches_2_1[matches->matches_1_2[i]] != (int)i)
             matches->matches_1_2[i] = -1;
     }
@@ -47,6 +48,7 @@ Matching::count_consistent_matches (Matching::Result const& matches)
     return counter;
 }
 
+// TODO 看不懂这里
 void
 Matching::combine_results(Matching::Result const& sift_result,
     Matching::Result const& surf_result, Matching::Result* result)
@@ -60,6 +62,7 @@ Matching::combine_results(Matching::Result const& sift_result,
     /* Combine results. */
     result->matches_1_2.clear();
     result->matches_1_2.reserve(num_matches_1);
+    // position first last
     result->matches_1_2.insert(result->matches_1_2.end(),
         sift_result.matches_1_2.begin(), sift_result.matches_1_2.end());
     result->matches_1_2.insert(result->matches_1_2.end(),
